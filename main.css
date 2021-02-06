@@ -122,6 +122,10 @@ body * {
         grid-template-columns: 100px 1fr 150px;
         justify-content: space-evenly;
         height: 60px;
+
+        animation-name: moveBack;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
     }
     .headerTitle {
         grid-column: 2;
@@ -149,6 +153,10 @@ body * {
     .hero {
         height: 200px;
         grid-column: 1 / span 2;
+        animation-name: moveBack;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+
     }
     .services {
         grid-column: 1 / span 2;
@@ -208,6 +216,27 @@ body * {
     }
     .footer {
         grid-column: 1 / span 2;
+        grid-column: 1 / span 3;
+
+        animation-name: moveBack;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+    }
+
+    .ads {
+
+        display: block;
+        grid-column-start: 3;
+        grid-row-start: row 3;
+        grid-row-end: row 6;
+        justify-self: stretch;
+        background-color: orange;
+        width: 0;
+
+        animation-name: moveBackAds;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
     }
 }
 
@@ -218,6 +247,10 @@ body * {
     .header {
         grid-template-columns: 100px 1fr 150px;
         grid-column: 1 / span 3;
+
+        animation-name: move;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
     }
     .headerTitle {
         display: none;
@@ -233,6 +266,9 @@ body * {
     .hero {
         height: 200px;
         grid-column: 1 / span 3;
+        animation-name: move;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
     }
 
     .testimonials {
@@ -254,19 +290,57 @@ body * {
     }
     .footer {
         grid-column: 1 / span 3;
+        animation-name: move;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
     }
     
     .ads {
     display: block;
-    grid-column: 3;
+    grid-column-start: -1;
+    grid-column-start: -2;
     grid-row-start: row 3;
     grid-row-end: row 6;
     justify-self: stretch;
     background-color: orange;
+
+    animation-name: resize;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+
 }
+}
+@keyframes resize {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%
+    }
+}
+@keyframes move {
+    0% {
+        width: 500px;
 
-
-
-
-
+    }
+    100% {
+        width: 100%;
+    }
+}
+@keyframes moveBack {
+    0% {
+        width: 700px;
+    }
+    100% {
+        width: 510px;
+    }
+}
+    @keyframes moveBackAds {
+        0% {
+            width: 50px;
+        }
+        100% {
+            width: 0;
+        }
+    
 }
