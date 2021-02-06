@@ -1,0 +1,272 @@
+body {
+    font-size: 20px;
+    text-align: center;
+    
+}
+body * {
+    border-radius: 3px;
+    padding-top: 5px;
+}
+.container {
+    display: grid;
+    justify-items: stretch;
+    justify-content: center;
+    grid-template-columns: 250px;
+    grid-template-rows: auto;
+    gap: 10px;
+}
+
+.header {
+    height: 30px;
+    grid-column-start: 1;
+    grid-row: row;
+    justify-self: stretch;
+    background-color: orange;
+    
+}
+.header > .logo {
+    display: none;
+}
+.header > .soc {
+    display: none;
+}
+.hero {
+    height: 60px;
+    grid-column-start: 1;
+    grid-row: row 2;
+    justify-self: stretch;
+    background-color: orange;
+}
+.serv1 {
+    grid-column: col/span 1;
+    grid-row: row 1;
+}
+.services {
+    grid-column-start: 1;
+    grid-row: row 3;
+    justify-self: stretch;
+    background-color: orange;
+    display: grid;
+    grid-template-columns: repeat(1, [col] auto);
+    grid-template-rows: auto;
+    gap: 10px;
+}
+.serv1 , .serv2 , .serv3 {
+    background-color: rgb(229, 195, 149);
+    margin: 0 10px 10px;
+    height: 30px;
+}
+.serv2 {
+    grid-column: col/span 1;
+    grid-row: row 2;
+}
+.serv3 {
+    grid-column: col/span 1;
+    grid-row: row 3;
+}
+.freelance {
+    height: 60px;
+    grid-column-start: 1;
+    grid-row: row 4;
+    justify-self: stretch;
+    background-color: orange;
+}
+.testimonials {
+    grid-column-start: 1;
+    grid-row: row 5;
+    justify-self: stretch;
+    background-color: orange;
+    display: grid;
+    grid-template-columns: repeat(1, [col] auto);
+    grid-template-rows: auto;
+    gap: 10px;
+}
+.test1 , .test2 {
+    background-color: rgb(229, 195, 149);
+    margin: 0 10px 10px;
+    height: 30px;
+}
+.test1 {
+    grid-column: col/span 1;
+    grid-row: row 1;
+}
+.test2 {
+    grid-column: col/span 1;
+    grid-row: row 2;
+}
+
+.footer {
+    height: 60px;
+    grid-column: 1 / span 1;
+    grid-row: row 6;
+    justify-self: stretch;
+    background-color: orange;
+}
+.nav {
+    height: 60px;
+    grid-column-start: 1;
+    grid-row: row 7;
+    background-color: orange;
+}
+.ads {
+    display: none;
+}
+
+@media (min-width: 600px) {
+    .container {
+        grid-template-columns: 250px 250px;
+    }
+    .header {
+        grid-column: 1 / span 2;
+        display: grid;
+        grid-template-columns: 100px 1fr 150px;
+        justify-content: space-evenly;
+        height: 60px;
+    }
+    .headerTitle {
+        grid-column: 2;
+        grid-row: 1;
+        height: 60px;
+    }
+    .header > .logo {
+        background-color: rgb(229, 195, 149);
+        display: block;
+        height: 30px;
+        grid-column: 1;
+        grid-row: 1;
+        margin-left: 5px;
+        
+    }
+    .header > .soc {
+        background-color: rgb(229, 195, 149);
+        display: block;
+        height: 30px;
+        grid-column: 3;
+        grid-row: 1;
+        margin-right: 5px;
+    }
+    
+    .hero {
+        height: 200px;
+        grid-column: 1 / span 2;
+    }
+    .services {
+        grid-column: 1 / span 2;
+        grid-template-columns: repeat(2, [col] auto);
+    }
+    .servTitle {
+        grid-column: 1 / 3;
+        grid-row: 1;
+        height: 60px;
+    }
+    .serv1 {
+        grid-column: 1;
+        grid-row: 2;
+        height: 60px;
+    }
+    .serv2 {
+        grid-column: 2 ;
+        grid-row: 2;
+        height: 60px;
+    }
+    .serv3 {
+        grid-column: 3 ;
+        grid-row: 2;
+        height: 60px;
+
+        display: none;
+    }
+    .testimonials {
+        grid-row: row 4;
+        grid-column: 1 / span 2;
+
+        grid-template-columns: repeat(2, [col] auto);
+
+    }
+    .testTitle {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+        height: 60px;
+    }
+
+    .test1 {
+        grid-column: 1;
+        grid-row: 2;
+        height: 60px;
+    }
+    .test2 {
+        grid-column: 2 ;
+        grid-row: 2;
+        height: 60px;
+    }
+    .freelance {
+        grid-row: row 5;
+        grid-column: 1 / span 2;
+    }
+    .nav {
+        display: none;
+    }
+    .footer {
+        grid-column: 1 / span 2;
+    }
+}
+
+@media (min-width: 1000px) {
+    .container {
+        grid-template-columns: 250px 250px 200PX;
+    }
+    .header {
+        grid-template-columns: 100px 1fr 150px;
+        grid-column: 1 / span 3;
+    }
+    .headerTitle {
+        display: none;
+    }
+    .nav {
+        display: block;
+        grid-column: 2;
+        grid-row: row 1;
+        justify-self: stretch;
+    }
+    
+
+    .hero {
+        height: 200px;
+        grid-column: 1 / span 3;
+    }
+
+    .testimonials {
+        grid-row: row 3;
+        grid-column: 1 / span 2;
+    }    
+    .services {
+        grid-row: row 4;
+        grid-template-columns: repeat(3, [col] auto);
+    }
+    .servTitle {
+        grid-column: 1 / span 3;
+        grid-row: 1;
+        height: 60px;
+    }
+
+    .serv3 {
+        display: block;
+    }
+    .footer {
+        grid-column: 1 / span 3;
+    }
+    
+    .ads {
+    display: block;
+    grid-column: 3;
+    grid-row-start: row 3;
+    grid-row-end: row 6;
+    justify-self: stretch;
+    background-color: orange;
+}
+
+
+
+
+
+}
